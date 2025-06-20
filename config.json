@@ -1,0 +1,85 @@
+{
+  "devices": {
+    "philips_hue": {
+      "enabled": true,
+      "bridge_ip": "192.168.1.101",
+      "api_key": "your_hue_api_key_here",
+      "lights": {
+        "living_room": {
+          "id": "1",
+          "name": "Гостиная",
+          "type": "hue_white"
+        },
+        "kitchen": {
+          "id": "2", 
+          "name": "Кухня",
+          "type": "hue_color"
+        }
+      }
+    },
+    "smart_plugs": {
+      "enabled": true,
+      "tplink": {
+        "living_room_plug": {
+          "ip": "192.168.1.100",
+          "name": "Розетка гостиной",
+          "type": "tplink_hs100"
+        },
+        "kitchen_plug": {
+          "ip": "192.168.1.103",
+          "name": "Розетка кухни", 
+          "type": "tplink_hs100"
+        }
+      }
+    },
+    "thermostat": {
+      "enabled": true,
+      "type": "nest",
+      "client_id": "your_nest_client_id",
+      "client_secret": "your_nest_client_secret",
+      "access_token": "your_nest_access_token"
+    },
+    "arduino_sensors": {
+      "enabled": true,
+      "devices": {
+        "main_sensor": {
+          "ip": "192.168.1.102",
+          "name": "Основной датчик",
+          "sensors": ["temperature", "humidity", "motion", "light"]
+        }
+      }
+    }
+  },
+  "network": {
+    "wifi_ssid": "YOUR_WIFI_SSID",
+    "wifi_password": "YOUR_WIFI_PASSWORD",
+    "local_ip_range": "192.168.1.0/24"
+  },
+  "automation": {
+    "enabled": true,
+    "rules": [
+      {
+        "name": "Автоматическое освещение",
+        "trigger": "motion_detected",
+        "action": "turn_on_lights",
+        "conditions": {
+          "time": "18:00-06:00",
+          "light_level": "< 50"
+        }
+      },
+      {
+        "name": "Энергосбережение",
+        "trigger": "no_motion",
+        "action": "turn_off_lights",
+        "conditions": {
+          "delay": "300"
+        }
+      }
+    ]
+  },
+  "security": {
+    "motion_alerts": true,
+    "camera_recording": true,
+    "door_alerts": true
+  }
+} 

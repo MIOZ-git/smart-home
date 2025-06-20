@@ -1,0 +1,72 @@
+[
+  {
+    "id": "living_room_light",
+    "name": "Свет в гостиной",
+    "type": "light",
+    "status": false,
+    "brightness": 100
+  },
+  {
+    "id": "kitchen_light",
+    "name": "Свет на кухне",
+    "type": "light",
+    "status": false,
+    "brightness": 80
+  },
+  {
+    "id": "bedroom_light",
+    "name": "Свет в спальне",
+    "type": "light",
+    "status": false,
+    "brightness": 60
+  },
+  {
+    "id": "thermostat",
+    "name": "Термостат",
+    "type": "thermostat",
+    "status": true,
+    "brightness": 100
+  },
+  {
+    "id": "security_camera",
+    "name": "Камера безопасности",
+    "type": "camera",
+    "status": true,
+    "brightness": 100
+  },
+  {
+    "id": "front_door_lock",
+    "name": "Замок входной двери",
+    "type": "lock",
+    "status": true,
+    "brightness": 100
+  },
+  {
+    "id": "smart_tv",
+    "name": "Умный телевизор",
+    "type": "tv",
+    "status": false,
+    "brightness": 100
+  },
+  {
+    "id": "coffee_maker",
+    "name": "Кофеварка",
+    "type": "coffee",
+    "status": false,
+    "brightness": 100
+  },
+  {
+    "id": "living_room_fan",
+    "name": "Вентилятор в гостиной",
+    "type": "fan",
+    "status": false,
+    "brightness": 100
+  },
+  {
+    "id": "living_room_curtains",
+    "name": "Шторы в гостиной",
+    "type": "curtain",
+    "status": false,
+    "brightness": 100
+  }
+] 
